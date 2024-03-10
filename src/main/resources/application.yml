@@ -1,0 +1,26 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: spring-cafe-service
+  jpa:
+    properties:
+      hibernate:
+        default_schema: spring_cafe
+      database: mysql
+    hibernate:
+      dialect: ${spring.jpa.properties.hibernate.dialect}
+      ddl-auto: update
+      show-sql: true
+      properties:
+        hibernate.jdbc.lob.non_contextual_creation: true
+        hibernate.format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_cafe?useUnicode=yes&characterEncoding=UTF-8
+    username: root
+    password: arkar122181
+
+format:
+  date: dd-MM-yyyy
+  date-time: dd-MM-yyyy:HH:mm:ss
