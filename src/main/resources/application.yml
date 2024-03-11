@@ -18,16 +18,16 @@ spring:
         hibernate.format_sql: true
 
 #Arkar datasoource
-#  datasource:
-#    url: jdbc:mysql://localhost:3306/spring_cafe?useUnicode=yes&characterEncoding=UTF-8
-#    username: root
-#    password: arkar122181
-
-# own datasource
   datasource:
     url: jdbc:mysql://localhost:3306/spring_cafe?useUnicode=yes&characterEncoding=UTF-8
     username: root
-    password: admin
+    password: arkar122181
+
+# own datasource
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/spring_cafe?useUnicode=yes&characterEncoding=UTF-8
+#    username: root
+#    password: admin
 
 
 format:

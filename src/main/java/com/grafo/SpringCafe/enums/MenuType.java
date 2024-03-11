@@ -1,5 +1,5 @@
 package com.grafo.SpringCafe.enums;
 
-public enum Meal {
+public enum MenuType {
     FOOD,DRINK
 }
