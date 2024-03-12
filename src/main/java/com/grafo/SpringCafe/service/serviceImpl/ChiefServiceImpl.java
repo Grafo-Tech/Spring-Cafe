@@ -10,6 +10,8 @@ import com.grafo.SpringCafe.service.ChiefService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ChiefServiceImpl implements ChiefService {
@@ -21,5 +23,12 @@ public class ChiefServiceImpl implements ChiefService {
         this.chiefRepo.save(chief);
         ChiefDto chiefDto = this.chiefMapper.entityToDto(chief);
         return new DataBody<>(chiefDto);
+    }
+
+    @Override
+    public DataBody<List<ChiefDto>> getAllChief() {
+        List<ChiefEntity> chiefEntityList = this.chiefRepo.findAll();
+        List<ChiefDto> chiefDtoList = this.chiefMapper.entityListToDtoList(chiefEntityList);
+        return new DataBody<>(chiefDtoList);
     }
 }
