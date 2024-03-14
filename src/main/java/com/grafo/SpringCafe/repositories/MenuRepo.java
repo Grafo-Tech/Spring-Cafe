@@ -1,9 +1,9 @@
 package com.grafo.SpringCafe.repositories;
 
-import com.grafo.SpringCafe.entities.StaffEntity;
+import com.grafo.SpringCafe.entities.MenuEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ChiefRepo extends JpaRepository<StaffEntity, Long> {
+public interface MenuRepo extends JpaRepository<MenuEntity, Long> {
 }
